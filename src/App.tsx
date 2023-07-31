@@ -1,6 +1,7 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import "./App.css";
 import NavBar from "./components/NavBar";
+import StandingGrid from "./components/StandingGrid";
 
 function App() {
   return (
@@ -10,16 +11,16 @@ function App() {
         lg: `"nav nav" "aside main"`,
       }}
     >
-      <GridItem area="nav">
+      <GridItem area="nav" textAlign="left">
         <NavBar />
       </GridItem>
       <Show above="lg">
-        <GridItem area="aside" bg="gold">
+        <GridItem area="aside" textAlign="left">
           Aside
         </GridItem>
       </Show>
-      <GridItem area="main" bg="blue">
-        Main
+      <GridItem area="main" textAlign="left">
+        <StandingGrid />
       </GridItem>
     </Grid>
   );
